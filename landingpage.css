@@ -11,7 +11,18 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    /* Add flex properties to align left and center vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 h1 {
@@ -21,22 +32,37 @@ h1 {
 
 #heading1 {
     /* Add slide-in animation */
-    
+    transform: translateX(-100%);
+    animation: slide-in 1s;
+    animation-fill-mode: forwards;
 }
 
 #heading2 {
     /* Add slide-in animation after delay */
-    
+    transform: translateX(-100%);
+    animation: slide-in 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
 }
 
 #heading3 {
     /* Add slide-in animation after dealy */
+    transform: translateX(-100%);
+    animation: slide-in 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
     
 }
 
 .nav {
     height: 60vh;
     /* Position on the right */
+    position: absolute;
+    right: 0px;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
 
     /* Use flex properties to space out links */
 
