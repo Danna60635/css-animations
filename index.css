@@ -6,3 +6,71 @@
     flex-wrap: wrap;
     gap: 10px;
 }
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+img {
+    animation: spin 3s;
+    
+} 
+
+@keyframes rock {
+    0% {
+        transform: translateX(0) ;
+    } 
+    10% {
+        transform: translateX(50px);
+    }
+    67% {
+        transform: translateX(-58px)
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#bear:active {
+    animation: rock 2s;
+}
+
+@keyframes fade {
+    0% {
+        transform: scale(100%);
+        opacity: 100%;
+    }
+    100% {
+        trasnform: scale(10%);
+        opacity: 0%;
+    }
+    
+}
+
+#elephant:active {
+    animation: fade 1s;
+}
+
+@keyframes dance {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(25%);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+    0% {
+        transform: translateY(0);
+    }
+}
+
+#giraffe:active {
+    animation: dance 1s;
+}
